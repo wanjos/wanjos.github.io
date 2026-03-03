@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DosAv Vending LLC — Partnership</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="DosAvLogo.jpeg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -127,7 +128,14 @@
     <p class="slabel reveal">Ready to Partner?</p>
     <h2 class="stitle cta-title reveal">LET'S PUT A MACHINE IN YOUR VENUE</h2>
     <p class="ssub cta-ssub reveal">Our team coordinates placement, compliance, installation, and ongoing service. Schedule a brief meeting to get started.</p>
-    <div class="reveal"><a href="mailto:contact@dosavvendingllc.com" class="btn-p">Get In Touch Today</a></div>
+    <div class="contact-dropdown-wrap">
+      <button class="btn-p contact-dropdown-btn" onclick="toggleContactMenu(event)">Get In Touch Today ▾</button>
+      <div class="contact-dropdown-menu" id="contactMenu">
+        <a href="mailto:contact@dosavvendingllc.com" class="contact-dropdown-item" target="_blank" rel="noopener"><span>✉️</span> Email</a>
+        <a href="tel:9102279370" class="contact-dropdown-item"><span>📞</span> Call</a>
+        <a href="sms:9102279370" class="contact-dropdown-item"><span>💬</span> Text</a>
+      </div>
+    </div>
     <div class="contact-grid reveal d1">
       <div class="c-item"><span class="c-ico">✉️</span><div><div class="c-lbl">Email</div><div class="c-val">contact@dosavvendingllc.com</div></div></div>
       <div class="c-item"><span class="c-ico">📞</span><div><div class="c-lbl">Phone/Text</div><div class="c-val">910-227-9370</div></div></div>
@@ -144,6 +152,17 @@
 </footer>
 
 <script>
+const canPhone = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+if (!canPhone) {
+  document.querySelectorAll('.contact-dropdown-item[href^="tel:"], .contact-dropdown-item[href^="sms:"]')
+    .forEach(el => el.remove());
+}
+function toggleContactMenu(e) {
+  e.stopPropagation();
+  document.getElementById('contactMenu').classList.toggle('open');
+}
+document.addEventListener('click', () => document.getElementById('contactMenu').classList.remove('open'));
+
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
