@@ -311,9 +311,9 @@ section { position: relative; z-index: 1; }
 
 /* About section */
 .about-sec { padding: 100px 0; }
-.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
-.about-text { margin-top: 1.5rem; }
-.about-text p { color: var(--gray); font-size: .95rem; margin-bottom: 1.2rem; }
+.about-layout { margin-top: 3rem; }
+.about-text { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.about-text p { color: var(--gray); font-size: .95rem; }
 .about-text strong { color: var(--white); font-weight: 500; }
 .founders { display: flex; flex-direction: column; gap: 1.25rem; }
 .founder { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem; border: 1px solid rgba(255,255,255,.07); transition: border-color .2s; }
