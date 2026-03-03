@@ -34,7 +34,7 @@ nav {
   border-bottom: 1px solid rgba(143,214,47,.12);
 }
 
-.nav-logo img { height: 52px; width: auto; display: block; }
+.nav-logo img { height: 52px; width: 52px; display: block; border-radius: 50%; object-fit: cover; }
 
 .nav-cta {
   background: var(--green);
@@ -89,7 +89,7 @@ nav {
 }
 
 .hero-logo { margin-bottom: 1.5rem; opacity: 0; animation: fadeUp .7s .1s forwards; }
-.hero-logo img { width: 120px; height: auto; }
+.hero-logo img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
 
 .hero-eyebrow {
   font-family: 'DM Mono', monospace;
@@ -370,7 +370,7 @@ footer {
   position: relative;
   z-index: 1;
 }
-.f-logo img { height: 36px; width: auto; }
+.f-logo img { height: 36px; width: 36px; border-radius: 50%; object-fit: cover; }
 
 /* Animations */
 @keyframes fadeUp {
