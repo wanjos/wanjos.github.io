@@ -354,10 +354,10 @@ section { position: relative; z-index: 1; }
 .cta-ssub { margin: 0 auto 2.5rem; text-align: center; max-width: 480px; }
 
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; text-align: left; }
-.c-item { padding: 1.25rem 1.5rem; border: 1px solid rgba(255,255,255,.09); display: flex; align-items: center; gap: 1rem; }
-.c-ico { font-size: 1.1rem; }
+.c-item { padding: 1.25rem 1.5rem; border: 1px solid rgba(255,255,255,.09); display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.c-ico { font-size: 1.1rem; flex-shrink: 0; }
 .c-lbl { font-size: .68rem; color: var(--gray); text-transform: uppercase; letter-spacing: .1em; }
-.c-val { font-size: .88rem; color: var(--white); font-weight: 500; word-break: break-all; }
+.c-val { font-size: .88rem; color: var(--white); font-weight: 500; overflow-wrap: break-word; min-width: 0; }
 
 footer {
   border-top: 1px solid rgba(255,255,255,.07);
